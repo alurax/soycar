@@ -21,18 +21,10 @@ export function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <img
-              src="/soycar_log.png"
-              alt="SoyCar Logo"
-              className="rounded-full w-[45px] h-[43px]"
-            />
+            <img src="/soycar_log.png" alt="SoyCar Logo" className="w-10 h-10 rounded-full" />
             <div>
-              <h1 className="font-serif text-xl font-semibold text-foreground">
-                SoyCar
-              </h1>
-              <p className="text-[10px] text-muted-foreground tracking-wider uppercase">
-                Transport & Rentals
-              </p>
+              <h1 className="font-serif text-xl font-semibold text-foreground">SoyCar</h1>
+              <p className="text-[10px] text-muted-foreground tracking-wider uppercase">Transport & Rentals</p>
             </div>
           </div>
 
@@ -87,11 +79,7 @@ export function Header() {
             className="md:hidden p-2 text-foreground"
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
