@@ -119,7 +119,7 @@ export function Services() {
                     <li
                       key={index}
                       className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
                       {feature}
                     </li>
                   ))}
@@ -141,7 +141,7 @@ export function Services() {
               <div key={index} className="flex items-start gap-4">
                 <div
                   className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <feature.icon className="w-6 h-6 text-primary" />
+                  <feature.icon className="w-6 h-6 text-[#dc2626]" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">{feature.title}</h3>

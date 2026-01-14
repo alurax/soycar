@@ -65,10 +65,12 @@ export function Gallery() {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-primary font-medium text-sm tracking-wider uppercase mb-4 block">
+          <span
+            className="font-medium text-sm tracking-wider uppercase mb-4 block text-[#dc2626]">
             Gallery
           </span>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-6">
+          <h2
+            className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-6">
             Discover Paradise
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
@@ -85,15 +87,15 @@ export function Gallery() {
               onClick={() => openLightbox(index)}
               className={`group relative overflow-hidden rounded-xl aspect-square ${
                 index === 0 ? "md:col-span-2 md:row-span-2" : ""
-              }`}
-            >
+              }`}>
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-end">
-                <div className="p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              <div
+                className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-end">
+                <div
+                  className="p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <p className="text-sm font-medium">{image.caption}</p>
                 </div>
               </div>
@@ -109,8 +111,7 @@ export function Gallery() {
               <button
                 onClick={closeLightbox}
                 className="absolute top-4 right-4 z-10 text-white/70 hover:text-white p-2 rounded-full bg-black/50"
-                aria-label="Close"
-              >
+                aria-label="Close">
                 <X className="w-6 h-6" />
               </button>
 
@@ -118,15 +119,13 @@ export function Gallery() {
               <button
                 onClick={goToPrevious}
                 className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white/70 hover:text-white p-2 rounded-full bg-black/50"
-                aria-label="Previous"
-              >
+                aria-label="Previous">
                 <ChevronLeft className="w-6 h-6" />
               </button>
               <button
                 onClick={goToNext}
                 className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white/70 hover:text-white p-2 rounded-full bg-black/50"
-                aria-label="Next"
-              >
+                aria-label="Next">
                 <ChevronRight className="w-6 h-6" />
               </button>
 
@@ -136,8 +135,7 @@ export function Gallery() {
                   <img
                     src={galleryImages[selectedImage].src.replace("w=800", "w=1600")}
                     alt={galleryImages[selectedImage].alt}
-                    className="max-h-[80vh] w-auto object-contain"
-                  />
+                    className="max-h-[80vh] w-auto object-contain" />
                   <p className="text-white/80 text-center py-4">
                     {galleryImages[selectedImage].caption}
                   </p>

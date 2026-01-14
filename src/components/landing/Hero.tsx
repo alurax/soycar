@@ -37,7 +37,7 @@ export function Hero() {
           {/* Badge */}
           <div
             className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20 mb-[0px]">
-            <span className="w-2 h-2 rounded-full animate-pulse bg-amber-400" />
+            <span className="w-2 h-2 rounded-full animate-pulse bg-red-600" />
             <span className="text-white/90 text-sm font-medium">
               Since 2015 • El Nido & Puerto Princesa
             </span>

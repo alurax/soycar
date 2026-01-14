@@ -52,10 +52,12 @@ export function TrustSection() {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-primary font-medium text-sm tracking-wider uppercase mb-4 block">
+          <span
+            className="font-medium text-sm tracking-wider uppercase mb-4 block text-[#dc2626]">
             Why Choose Us
           </span>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-6">
+          <h2
+            className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-6">
             Trusted by Travelers Worldwide
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
@@ -67,7 +69,9 @@ export function TrustSection() {
         {/* Testimonials */}
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-16">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="border-border/50 hover:border-primary/30 transition-colors">
+            <Card
+              key={index}
+              className="border-border/50 hover:border-primary/30 transition-colors">
               <CardContent className="p-6">
                 {/* Quote Icon */}
                 <Quote className="w-8 h-8 text-primary/20 mb-4" />
@@ -89,8 +93,7 @@ export function TrustSection() {
                   <img
                     src={testimonial.avatar}
                     alt={testimonial.name}
-                    className="w-10 h-10 rounded-full object-cover"
-                  />
+                    className="w-10 h-10 rounded-full object-cover" />
                   <div>
                     <p className="font-semibold text-foreground text-sm">{testimonial.name}</p>
                     <p className="text-xs text-muted-foreground">{testimonial.location}</p>
@@ -103,7 +106,8 @@ export function TrustSection() {
 
         {/* Google Review Badge */}
         <div className="flex justify-center mb-16">
-          <div className="inline-flex items-center gap-4 bg-secondary/50 rounded-full px-6 py-3">
+          <div
+            className="inline-flex items-center gap-4 bg-secondary/50 rounded-full px-6 py-3">
             <div className="flex gap-0.5">
               {Array.from({ length: 5 }).map((_, i) => (
                 <Star key={i} className="w-5 h-5 fill-accent text-accent" />
@@ -123,8 +127,7 @@ export function TrustSection() {
           {credentials.map((credential, index) => (
             <div
               key={index}
-              className="text-center p-6 rounded-xl bg-secondary/30 border border-border/50"
-            >
+              className="text-center p-6 rounded-xl bg-secondary/30 border border-border/50">
               <h3 className="font-semibold text-foreground mb-2">{credential.title}</h3>
               <p className="text-sm text-muted-foreground">{credential.description}</p>
             </div>
@@ -139,8 +142,7 @@ export function TrustSection() {
                 <img
                   src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=400&q=80"
                   alt="SoyCar Family Team"
-                  className="w-48 h-48 md:w-full md:h-auto rounded-xl object-cover"
-                />
+                  className="w-48 h-48 md:w-full md:h-auto rounded-xl object-cover" />
               </div>
               <div className="md:w-2/3 text-center md:text-left">
                 <h3 className="font-serif text-2xl font-bold text-foreground mb-4">
