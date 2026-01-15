@@ -24,7 +24,7 @@ export function Header() {
             <img src="/soycar_log.png" alt="SoyCar Logo" className="w-10 h-10 rounded-full" />
             <div>
               <h1 className="font-serif text-xl font-semibold text-foreground">SoyCar</h1>
-              <p className="text-[10px] text-muted-foreground tracking-wider uppercase">Transport & Rentals</p>
+              <p className="text-[10px] text-muted-foreground tracking-wider uppercase">Transport & Car Rentals</p>
             </div>
           </div>
 

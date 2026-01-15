@@ -355,7 +355,7 @@ export function BookingForm() {
                   </div>
                   <div>
                     <p className="font-semibold text-foreground text-sm">Call Us</p>
-                    <p className="font-medium text-[#dc2626]">+63 912 345 6789</p>
+                    <p className="font-medium text-[#dc2626]">+63 975 380 3735</p>
                   </div>
                 </a>
 
@@ -389,7 +389,7 @@ export function BookingForm() {
                   </div>
                   <div>
                     <p className="font-semibold text-foreground text-sm">Email</p>
-                    <p className="font-medium text-[#dc2626]">book@soycar.ph</p>
+                    <p className="font-medium text-[#dc2626]">soycartransportcarrrentals@gmail.com</p>
                   </div>
                 </a>
 
@@ -399,7 +399,7 @@ export function BookingForm() {
                     <div>
                       <p className="text-sm font-medium text-foreground">Service Areas</p>
                       <p className="text-sm text-muted-foreground">
-                        Puerto Princesa, El Nido, San Vicente, Port Barton
+                         El Nido, Puerto Princesa, San Vicente, Port Barton
                       </p>
                     </div>
                   </div>
@@ -408,7 +408,7 @@ export function BookingForm() {
                     <div>
                       <p className="text-sm font-medium text-foreground">Response Time</p>
                       <p className="text-sm text-muted-foreground">
-                        Within 2 hours (usually faster!)
+                        Within 1 hours (usually faster!)
                       </p>
                     </div>
                   </div>

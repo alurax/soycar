@@ -20,9 +20,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-serif font-bold text-lg">S</span>
-              </div>
+              <img src="/soycar_log.png" alt="SoyCar Logo" className="w-10 h-10 rounded-full" />
               <div>
                 <h3 className="font-serif text-xl font-semibold text-background">SoyCar</h3>
                 <p className="text-[10px] text-background/60 tracking-wider uppercase">Transport & Rentals</p>
@@ -90,7 +88,7 @@ export function Footer() {
             <h4 className="font-semibold text-background mb-4">Our Services</h4>
             <ul className="space-y-3 text-sm text-background/70">
               <li>Airport Transfers</li>
-              <li>Inland Tours (A, B, C, D)</li>
+              <li>Inland Tours (8 hours)</li>
               <li>Vehicle Rentals</li>
               <li>Private Charters</li>
               <li>Group Transportation</li>
@@ -107,24 +105,24 @@ export function Footer() {
               >
                 <Phone className="w-5 h-5 flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-sm font-medium text-background">+63 912 345 6789</p>
+                  <p className="text-sm font-medium text-background">+63 975 380 3735</p>
                   <p className="text-xs text-background/50">Available 24/7</p>
                 </div>
               </a>
               <a
-                href="mailto:book@soycar.ph"
+                href="mailto:soycartransportcarrrentals@gmail.com"
                 className="flex items-start gap-3 text-background/70 hover:text-primary transition-colors"
               >
                 <Mail className="w-5 h-5 flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-sm font-medium text-background">book@soycar.ph</p>
+                  <p className="text-sm font-medium text-background">soycartransportcarrrentals@gmail.com</p>
                   <p className="text-xs text-background/50">Quick response</p>
                 </div>
               </a>
               <div className="flex items-start gap-3 text-background/70">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-sm font-medium text-background">Puerto Princesa</p>
+                  <p className="text-sm font-medium text-background">El Nido</p>
                   <p className="text-xs text-background/50">Palawan, Philippines</p>
                 </div>
               </div>

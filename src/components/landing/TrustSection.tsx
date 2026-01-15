@@ -140,7 +140,7 @@ export function TrustSection() {
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="md:w-1/3">
                 <img
-                  src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=400&q=80"
+                  src="/team.jpg"
                   alt="SoyCar Family Team"
                   className="w-48 h-48 md:w-full md:h-auto rounded-xl object-cover" />
               </div>
