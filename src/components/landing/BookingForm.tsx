@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/select";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Loader2, Phone, Mail, MapPin, Clock } from "lucide-react";
+import { supabase } from "@/lib/supabase";
 
 interface BookingFormData {
   name: string;
@@ -68,20 +69,48 @@ export function BookingForm() {
   const onSubmit = async (data: BookingFormData) => {
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    
-    console.log("Booking submitted:", { ...data, serviceType: selectedService });
-    
-    setIsSubmitting(false);
-    setIsSuccess(true);
-    
-    // Reset after showing success
-    setTimeout(() => {
-      setIsSuccess(false);
-      reset();
-      setSelectedService("");
-    }, 5000);
+    try {
+      // Save booking to Supabase
+      const { error } = await supabase
+        .from('bookings')
+        .insert([
+          {
+            name: data.name,
+            email: data.email,
+            phone: data.phone,
+            service_type: selectedService,
+            pickup_location: data.pickupLocation,
+            dropoff_location: data.dropoffLocation,
+            travel_date: data.travelDate,
+            travel_time: data.travelTime,
+            passengers: data.passengers,
+            flight_number: data.flightNumber || null,
+            special_requests: data.specialRequests || null,
+            status: 'pending',
+          },
+        ]);
+
+      if (error) {
+        console.error('Error saving booking:', error);
+        alert('Failed to submit booking. Please try again or contact us directly.');
+        setIsSubmitting(false);
+        return;
+      }
+
+      setIsSubmitting(false);
+      setIsSuccess(true);
+      
+      // Reset after showing success
+      setTimeout(() => {
+        setIsSuccess(false);
+        reset();
+        setSelectedService("");
+      }, 5000);
+    } catch (error) {
+      console.error('Unexpected error:', error);
+      alert('An error occurred. Please try again or contact us directly.');
+      setIsSubmitting(false);
+    }
   };
 
   const isAirportTransfer = selectedService.includes("airport");
@@ -105,8 +134,8 @@ export function BookingForm() {
               </p>
               <p className="text-sm text-muted-foreground">
                 For urgent inquiries, call us at{" "}
-                <a href="tel:+639123456789" className="text-primary font-semibold">
-                  +63 912 345 6789
+                <a href="tel:+639753803735" className="text-primary font-semibold">
+                  +63 975 380 3735
                 </a>
               </p>
             </CardContent>
@@ -347,7 +376,7 @@ export function BookingForm() {
               </CardHeader>
               <CardContent className="space-y-6">
                 <a
-                  href="tel:+639123456789"
+                  href="tel:+639753803735"
                   className="flex items-start gap-4 p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors">
                   <div
                     className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -381,15 +410,17 @@ export function BookingForm() {
                 </a>
 
                 <a
-                  href="mailto:book@soycar.ph"
+                  href="mailto:soycartransportcarrrentals@gmail.com"
                   className="flex items-start gap-4 p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors">
                   <div
                     className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <Mail className="w-5 h-5 text-[#dc2626]" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="font-semibold text-foreground text-sm">Email</p>
-                    <p className="font-medium text-[#dc2626]">soycartransportcarrrentals@gmail.com</p>
+                    <p className="font-medium text-[#dc2626] text-sm break-words">
+                      soycartransportcarrrentals@gmail.com
+                    </p>
                   </div>
                 </a>
 
