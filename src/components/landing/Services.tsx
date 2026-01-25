@@ -69,21 +69,21 @@ export function Services() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span
-            className="font-medium text-sm tracking-wider uppercase mb-4 block text-red-600">
+            className="font-medium text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4 block text-red-600">
             Our Services
           </span>
           <h2
-            className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-6">
+            className="font-serif text-2xl sm:text-3xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6 px-2">
             Everything You Need to Explore Palawan
           </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
+          <p className="text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed px-2">
             From the moment you land to your final destination, we've got you covered 
             with reliable, comfortable, and affordable transport solutions.
           </p>
         </div>
 
         {/* Service Cards */}
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-20">
           {services.map((service) => (
             <Card
               key={service.id}

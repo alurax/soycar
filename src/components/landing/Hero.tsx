@@ -45,38 +45,38 @@ export function Hero() {
 
           {/* Headline */}
           <h1
-            className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2">
             Your Journey Through
             <span className="block mt-2 text-amber-400">Paradise Starts Here</span>
           </h1>
 
           {/* Subheadline */}
           <p
-            className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed">
+            className="text-base sm:text-lg md:text-xl text-white/80 mb-6 sm:mb-10 max-w-2xl mx-auto leading-relaxed px-2">
             Trusted airport transfers, breathtaking inland tours, and reliable vehicle 
             rentals across Palawan. Travel with the family that knows these roads by heart.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col xs:flex-row items-center justify-center gap-3 px-2">
             <Button
               onClick={scrollToBooking}
               size="lg"
-              className="w-full sm:w-auto hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg font-semibold shadow-lg shadow-primary/25 bg-amber-400">
+              className="w-full sm:w-auto hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-lg font-semibold shadow-lg shadow-primary/25 bg-amber-400">
               Book Your Ride
             </Button>
             <Button
               onClick={scrollToServices}
               variant="outline"
               size="lg"
-              className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border-white/30 px-8 py-6 text-lg backdrop-blur-sm">
+              className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border-white/30 px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-lg backdrop-blur-sm">
               Explore Services
             </Button>
           </div>
 
           {/* Trust Indicators */}
           <div
-            className="mt-12 flex flex-wrap items-center justify-center gap-6 md:gap-12 text-white/70">
+            className="mt-8 sm:mt-12 flex flex-wrap items-center justify-center gap-3 sm:gap-6 md:gap-12 text-white/70 text-xs sm:text-sm px-2">
             <div className="flex items-center gap-2">
               <span className="text-2xl font-bold text-white">10+</span>
               <span className="text-sm">Years of Experience</span>

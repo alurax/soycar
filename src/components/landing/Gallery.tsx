@@ -11,9 +11,9 @@ const galleryImages = [
     caption: "Comfortable luxury van for VIPs",
   },
   {
-    src: "https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=800&q=80",
-    alt: "Luxury sedan",
-    caption: "Elegant sedans for your trips",
+    src: "/montero.jpg",
+    alt: "Montero GT",
+    caption: "Top-tier Monetero GT",
   },
   {
     src: "suv.jpg",
@@ -66,14 +66,14 @@ export function Gallery() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span
-            className="font-medium text-sm tracking-wider uppercase mb-4 block text-[#dc2626]">
+            className="font-medium text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4 block text-[#dc2626]">
             Our Fleet
           </span>
           <h2
-            className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-6">
+            className="font-serif text-2xl sm:text-3xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6 px-2">
             Premium Vehicles for Your Journey
           </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
+          <p className="text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed px-2">
             Explore our diverse fleet of well-maintained, modern vehicles. 
             From comfortable SUVs to luxury sedans, we have the perfect car for your Palawan adventure.
           </p>

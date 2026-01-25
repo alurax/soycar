@@ -159,22 +159,22 @@ export function BookingForm() {
     <section id="booking" className="py-20 md:py-32 bg-secondary/30">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-12 px-2">
           <span
-            className="font-medium text-sm tracking-wider uppercase mb-4 block text-[#dc2626]">
+            className="font-medium text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4 block text-[#dc2626]">
             Book Your Ride
           </span>
           <h2
-            className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-6">
+            className="font-serif text-2xl sm:text-3xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6">
             Ready to Explore Palawan?
           </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
+          <p className="text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed">
             Fill out the form below and we'll get back to you within 2 hours with 
             a confirmed quote. No payment required until pickup.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
           {/* Form */}
           <div className="lg:col-span-2">
             <Card className="border-border/50">

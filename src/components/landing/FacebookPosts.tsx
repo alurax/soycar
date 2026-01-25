@@ -47,17 +47,17 @@ export function FacebookPosts() {
   }, []);
 
   return (
-    <section id="facebook-posts" className="py-20 md:py-32 bg-gray-50">
+    <section id="facebook-posts" className="py-16 md:py-20 lg:py-32 bg-gray-50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="font-medium text-sm tracking-wider uppercase mb-4 block text-[#dc2626]">
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16 px-2">
+          <span className="font-medium text-xs sm:text-sm tracking-wider uppercase mb-3 sm:mb-4 block text-[#dc2626]">
             Social Media
           </span>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6">
             Latest Updates
           </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
+          <p className="text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed">
             Follow our Facebook page for the latest news, promotions, and travel tips from SoyCar.
           </p>
         </div>
@@ -78,15 +78,15 @@ export function FacebookPosts() {
         </div>
 
         {/* Fallback Link */}
-        <div className="text-center mt-8">
-          <p className="text-sm text-muted-foreground mb-4">
+        <div className="text-center mt-8 px-2">
+          <p className="text-xs sm:text-sm text-muted-foreground mb-4">
             Can't see the feed? Visit us directly:
           </p>
           <a
             href="https://www.facebook.com/soycartransportpalawan"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-[#1877F2] text-white font-medium hover:bg-[#0a66c2] transition-colors"
+            className="inline-flex items-center justify-center px-6 sm:px-8 py-3 rounded-lg bg-[#1877F2] text-white font-medium hover:bg-[#0a66c2] transition-colors text-sm sm:text-base"
           >
             Visit Our Facebook Page
           </a>
