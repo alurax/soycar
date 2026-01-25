@@ -15,26 +15,27 @@ export function FacebookPosts() {
     const loadFBSDK = () => {
       (window as any).fbAsyncInit = function () {
         (window as any).FB.init({
-          appId: process.env.NEXT_PUBLIC_FACEBOOK_APP_ID,
+          appId: process.env.NEXT_PUBLIC_FACEBOOK_APP_ID || "693943867019937",
           xfbml: true,
-          version: "v18.0",
+          version: "v19.0",
         });
+        // Parse after init
+        (window as any).FB.XFBML.parse();
       };
 
-      // Load the SDK script
+      // Load the SDK script - don't hardcode app ID in URL
       const script = document.createElement("script");
       script.id = "facebook-jssdk";
-      script.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0&appId=693943867019937";
+      script.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0";
       script.async = true;
       script.defer = true;
-      document.body.appendChild(script);
-
-      // Parse XFBML after a delay to ensure SDK is loaded
-      setTimeout(() => {
-        if ((window as any).FB) {
-          (window as any).FB.XFBML.parse();
+      script.onload = () => {
+        // After script loads, initialize
+        if ((window as any).fbAsyncInit) {
+          (window as any).fbAsyncInit();
         }
-      }, 1000);
+      };
+      document.body.appendChild(script);
     };
 
     // Check if FB SDK is already loaded
@@ -66,7 +67,7 @@ export function FacebookPosts() {
         <div className="max-w-4xl mx-auto">
           <div
             className="fb-page"
-            data-href="https://www.facebook.com/soycartransportpalawan"
+            data-href="https://www.facebook.com/soycartransportpalawan/"
             data-tabs="timeline,events"
             data-width="100%"
             data-height="600"
