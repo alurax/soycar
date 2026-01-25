@@ -1,6 +1,7 @@
 "use client";
 
 import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
+import Link from "next/link";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -137,13 +138,13 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-background/50">
             <p>© {currentYear} SoyCar Transport & Car Rentals. All rights reserved.</p>
             <div className="flex items-center gap-4">
-              <a href="#" className="hover:text-background transition-colors">
+              <Link href="/privacy-policy" className="hover:text-background transition-colors">
                 Privacy Policy
-              </a>
+              </Link>
               <span>•</span>
-              <a href="#" className="hover:text-background transition-colors">
-                Terms of Service
-              </a>
+              <Link href="/terms-conditions" className="hover:text-background transition-colors">
+                Terms & Conditions
+              </Link>
             </div>
           </div>
         </div>
