@@ -122,7 +122,7 @@ export function Header() {
                 className="flex items-center gap-2 text-foreground font-medium"
               >
                 <Phone className="w-4 h-4" />
-                <span>+63 912 345 6789</span>
+                <span>+63 975 380 3735</span>
               </a>
               <a
                 href="/hotel/login"
