@@ -32,15 +32,14 @@ interface BookingFormData {
 }
 
 const serviceOptions = [
-  { value: "airport-pps-elnido", label: "Airport Transfer: PPS → El Nido" },
-  { value: "airport-elnido-pps", label: "Airport Transfer: El Nido → PPS" },
-  { value: "airport-roundtrip", label: "Airport Transfer: Round Trip" },
-  { value: "tour-a", label: "Inland Tour A (Underground River)" },
-  { value: "tour-b", label: "Inland Tour B (Honda Bay)" },
-  { value: "tour-c", label: "Inland Tour C (City Tour)" },
-  { value: "tour-d", label: "Inland Tour D (Firefly Watching)" },
-  { value: "rental-car", label: "Vehicle Rental: Car (Self-drive)" },
-  { value: "rental-van", label: "Vehicle Rental: Van (With driver)" },
+  { value: "elnido-airport-hotel", label: "El Nido Airport - Hotel" },
+  { value: "hotel-elnido-airport", label: "Hotel - El Nido Airport" },
+  { value: "elnido-pps-private", label: "El Nido - Puerto Princesa (Private)" },
+  { value: "pps-elnido-private", label: "Puerto Princesa - El Nido (Private)" },
+  { value: "elnido-pps-shared", label: "El Nido - Puerto Princesa (Shared)" },
+  { value: "pps-elnido-shared", label: "Puerto Princesa - El Nido (Shared)" },
+  { value: "city-tour-pps", label: "City Tour (Puerto Princesa)" },
+  { value: "inland-tour", label: "Inland Tour" },
   { value: "custom", label: "Custom Trip / Other" },
 ];
 
@@ -64,9 +63,19 @@ export function BookingForm() {
     handleSubmit,
     reset,
     formState: { errors },
+    watch,
+    setValue,
   } = useForm<BookingFormData>();
 
+  const passengersValue = watch("passengers");
+
   const onSubmit = async (data: BookingFormData) => {
+    // Validate passengers field manually
+    if (!passengersValue) {
+      alert('Please select number of passengers');
+      return;
+    }
+
     setIsSubmitting(true);
     
     try {
@@ -83,7 +92,7 @@ export function BookingForm() {
             dropoff_location: data.dropoffLocation,
             travel_date: data.travelDate,
             travel_time: data.travelTime,
-            passengers: data.passengers,
+            passengers: passengersValue,
             flight_number: data.flightNumber || null,
             special_requests: data.specialRequests || null,
             status: 'pending',
@@ -92,7 +101,8 @@ export function BookingForm() {
 
       if (error) {
         console.error('Error saving booking:', error);
-        alert('Failed to submit booking. Please try again or contact us directly.');
+        const errorMessage = error?.message || 'Failed to submit booking. Please try again or contact us directly.';
+        alert(`Booking Error: ${errorMessage}\n\nPlease check that the bookings table exists in Supabase and your RLS policies allow inserts.`);
         setIsSubmitting(false);
         return;
       }
@@ -301,9 +311,9 @@ export function BookingForm() {
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="passengers">Passengers *</Label>
-                        <Select {...register("passengers")}>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select" />
+                        <Select value={passengersValue || ""} onValueChange={(value) => setValue("passengers", value)}>
+                          <SelectTrigger className={!passengersValue ? "text-muted-foreground" : ""}>
+                            <SelectValue placeholder="Select number of passengers" />
                           </SelectTrigger>
                           <SelectContent>
                             {passengerOptions.map((option) => (
@@ -313,6 +323,9 @@ export function BookingForm() {
                             ))}
                           </SelectContent>
                         </Select>
+                        {errors.passengers && (
+                          <p className="text-destructive text-xs">{errors.passengers.message}</p>
+                        )}
                       </div>
                     </div>
 

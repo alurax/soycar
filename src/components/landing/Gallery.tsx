@@ -6,34 +6,34 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const galleryImages = [
   {
-    src: "https://images.unsplash.com/photo-1537956965359-7573183d1f57?w=800&q=80",
-    alt: "El Nido limestone cliffs",
-    caption: "El Nido's iconic limestone cliffs",
+    src: "/luxuryvan4.jpg",
+    alt: "Artista Van",
+    caption: "Comfortable luxury van for VIPs",
   },
   {
-    src: "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=800&q=80",
-    alt: "Scenic coastal road in Palawan",
-    caption: "Scenic drives along Palawan's coast",
+    src: "https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=800&q=80",
+    alt: "Luxury sedan",
+    caption: "Elegant sedans for your trips",
   },
   {
-    src: "https://images.unsplash.com/photo-1500835556837-99ac94a94552?w=800&q=80",
-    alt: "Crystal clear waters of Palawan",
-    caption: "Crystal clear waters await",
+    src: "suv.jpg",
+    alt: "Modern compact car",
+    caption: "Perfect for city exploration",
   },
   {
-    src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
-    alt: "White sand beach in Palawan",
-    caption: "Pristine white sand beaches",
+    src: "/spacious_van.jpg",
+    alt: "Spacious van",
+    caption: "Spacious vans for group adventures",
   },
   {
-    src: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=80",
-    alt: "Sunset view from Palawan",
-    caption: "Unforgettable Palawan sunsets",
+    src: "delica.jpg",
+    alt: "Adventure vehicle",
+    caption: "Rugged vehicles for off-road exploration",
   },
   {
-    src: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80",
-    alt: "Mountain and lake view",
-    caption: "Explore beyond the beach",
+    src: "/4vans.jpg",
+    alt: "Premium Vans",
+    caption: "Nissan Premium Vans",
   },
 ];
 
@@ -67,15 +67,15 @@ export function Gallery() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span
             className="font-medium text-sm tracking-wider uppercase mb-4 block text-[#dc2626]">
-            Gallery
+            Our Fleet
           </span>
           <h2
             className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-6">
-            Discover Paradise
+            Premium Vehicles for Your Journey
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Get a glimpse of the breathtaking destinations awaiting you in Palawan. 
-            These are the views you'll experience with SoyCar.
+            Explore our diverse fleet of well-maintained, modern vehicles. 
+            From comfortable SUVs to luxury sedans, we have the perfect car for your Palawan adventure.
           </p>
         </div>
 

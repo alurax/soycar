@@ -65,6 +65,12 @@ export function Header() {
               <Phone className="w-4 h-4" />
               <span>Call Us</span>
             </a>
+            <a
+              href="/hotel/login"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Hotel Login
+            </a>
             <Button
               onClick={() => scrollToSection("booking")}
               className="bg-primary hover:bg-primary/90"
@@ -117,6 +123,12 @@ export function Header() {
               >
                 <Phone className="w-4 h-4" />
                 <span>+63 912 345 6789</span>
+              </a>
+              <a
+                href="/hotel/login"
+                className="text-center py-2 text-foreground font-medium"
+              >
+                Hotel Partner
               </a>
               <Button
                 onClick={() => scrollToSection("booking")}

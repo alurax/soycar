@@ -5,3 +5,5 @@ export { Gallery } from "./Gallery";
 export { TrustSection } from "./TrustSection";
 export { BookingForm } from "./BookingForm";
 export { Footer } from "./Footer";
+export { BackgroundMusic } from "./BackgroundMusic";
+export { FacebookPosts } from "./FacebookPosts";

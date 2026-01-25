@@ -29,20 +29,20 @@ const testimonials = [
 
 const credentials = [
   {
-    title: "LTO Accredited",
-    description: "Fully licensed transport operator",
+    title: "DTI Registered",
+    description: "A legally recognized business identity providing security and accountability for every client.",
   },
   {
-    title: "DOT Registered",
-    description: "Department of Tourism certified",
+    title: "BIR Registered",
+    description: "Fully tax-compliant and authorized to issue official receipts for all transport services.",
   },
   {
-    title: "Comprehensive Insurance",
-    description: "All passengers covered",
+    title: "LTFRB Franchise",
+    description: "Authorized by the LTFRB to provide safe, regulated, and insured passenger transport.",
   },
   {
     title: "Local Expertise",
-    description: "8+ years in Palawan tourism",
+    description: "Over 10 years of specialized experience navigating Palawan's premier tourism destinations.",
   },
 ];
 
